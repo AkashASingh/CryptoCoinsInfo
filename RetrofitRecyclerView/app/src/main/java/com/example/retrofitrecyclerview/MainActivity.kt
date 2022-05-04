@@ -9,7 +9,7 @@ import com.example.retrofitrecyclerview.databinding.ActivityMainBinding
 import retrofit2.*
 import retrofit2.converter.gson.GsonConverterFactory
 
-const val BASE_URL = "https://api.coinpaprika.com/"
+const val BASE_URL = "https://api.coinpaprika.com/v1/"
 
 class MainActivity : AppCompatActivity() {
     private lateinit var mAdapter: RecyclerViewAdapter
@@ -19,10 +19,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         getCoins()
-        binding.recyclerView.layoutManager= LinearLayoutManager(this)
-        mAdapter = RecyclerViewAdapter()
-        binding.recyclerView.adapter = mAdapter
-
+        binding.recycleView.layoutManager= LinearLayoutManager(this)
 
     }
 
@@ -43,7 +40,9 @@ class MainActivity : AppCompatActivity() {
             ) {
 
                 val responseBody = response.body()!!
-
+                mAdapter = RecyclerViewAdapter(baseContext,responseBody)
+                mAdapter.notifyDataSetChanged()
+                binding.recycleView.adapter = mAdapter
 
             }
 

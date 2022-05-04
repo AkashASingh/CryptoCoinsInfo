@@ -5,6 +5,6 @@ import retrofit2.http.GET
 
 
 interface RetrofitInterface {
-    @GET("v1/coins")
+    @GET("coins")
     fun getData() : Call<List<CoinsApiItem>>
 }

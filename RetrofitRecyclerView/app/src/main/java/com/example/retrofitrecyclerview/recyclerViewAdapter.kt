@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class RecyclerViewAdapter: RecyclerView.Adapter<RecyclerViewAdapter.CoinsViewHolder>() {
+class RecyclerViewAdapter(baseContext: Context, responseBody: List<CoinsApiItem>) : RecyclerView.Adapter<RecyclerViewAdapter.CoinsViewHolder>() {
     private val crCoins: ArrayList<CoinsApiItem> = ArrayList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CoinsViewHolder {
@@ -35,10 +35,10 @@ class RecyclerViewAdapter: RecyclerView.Adapter<RecyclerViewAdapter.CoinsViewHol
 
 
     class CoinsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var coinName = itemView.findViewById<TextView>(R.id.coinNamesTextView)
-        var coinRank = itemView.findViewById<TextView>(R.id.serialTextView)
-        var coinSymbol = itemView.findViewById<TextView>(R.id.coinSymbolTV)
-        var coinIsActive = itemView.findViewById<TextView>(R.id.isActiveTextView)
+        var coinName: TextView = itemView.findViewById<TextView>(R.id.coinNamesTextView)
+        var coinRank: TextView = itemView.findViewById<TextView>(R.id.serialTextView)
+        var coinSymbol: TextView = itemView.findViewById<TextView>(R.id.coinSymbolTV)
+        var coinIsActive: TextView = itemView.findViewById<TextView>(R.id.isActiveTextView)
 
 
     }
