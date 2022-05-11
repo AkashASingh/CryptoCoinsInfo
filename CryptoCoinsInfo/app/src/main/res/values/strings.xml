@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">CryptoCoinsInfo</string>
+    <string name="hello_world">Hello World!!</string>
+    <string name="cryptoCoin_Text">CryptoCoin</string>
+    <string name="Rank_Text">1</string>
+    <string name="symbol_Text">Symbol</string>
+    <string name="isActive_Text">IsActive</string>
+    <string name="list_of_cryptocurrency_coins_Text">List of CryptoCurrency Coins</string>
+    <string name="list_of_all_cryptocurrrency_Text">List Of All CryptoCurrrency</string>
+    <string name="list_of_all_cryptoCurrrency_Text">Crypto_Text</string>
+    <string name="list_of_all_cryptoCurrency_Text">Crypto_Text</string>
+    <string name="list_of_all_cryptocurrency_Text">List of All CryptoCurrency</string>
+    <string name="CoinRanking_Text">Rank</string>
+    <string name="coins_name_Text">Coins Name</string>
+    <string name="symbol_text">Symbol</string>
+    <string name="coin_is_active_text">Coin Is Active</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
